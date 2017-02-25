@@ -9,4 +9,5 @@
 + [SpringBoot在FatJar模式下使用jsp](https://github.com/superalsrk/springboot-practice/tree/master/springboot-demo-jsp-by-jar)
 + [SpringBoot基础版springsecurity配置](https://github.com/superalsrk/springboot-practice/tree/master/springboot-demo-security-basic)
 + [SpringBoot oauth2配置](https://github.com/superalsrk/springboot-practice/tree/master/springboot-demo-security-oauth2)
++ [SpringBoot I18N国际化](https://github.com/superalsrk/springboot-practice/tree/master/springboot-demo)
 
