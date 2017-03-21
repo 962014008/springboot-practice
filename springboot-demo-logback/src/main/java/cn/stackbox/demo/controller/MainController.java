@@ -25,7 +25,7 @@ public class MainController {
     private static Logger LOG = LoggerFactory.getLogger(MainController.class);
 
     @RequestMapping("/")
-    public String main() {
+    public String index() {
 
         String content = "Request at " + new Date().toString();
         LOG.warn(content);
