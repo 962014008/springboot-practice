@@ -17,4 +17,10 @@ public interface UserService {
 
     // 查
     List<User> list (Long id);
+
+    // 查
+    List<User> listAll ();
+
+    // 根据姓名查找用户
+    User findByName(String name);
 }

@@ -1,6 +1,7 @@
 package cn.stackbox.demo.service.impl;
 
 import cn.stackbox.demo.entity.User;
+import cn.stackbox.demo.mapper.UserMapper;
 import cn.stackbox.demo.repository.UserRepository;
 import cn.stackbox.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private UserMapper userMapper;
 
     @Override
     public User save(User user) {
@@ -46,5 +50,15 @@ public class UserServiceImpl implements UserService {
         }
 
         return userList;
+    }
+
+    @Override
+    public List<User> listAll() {
+        return (List<User>) userRepository.findAll();
+    }
+
+    @Override
+    public User findByName(String name) {
+        return userMapper.findByName(name);
     }
 }

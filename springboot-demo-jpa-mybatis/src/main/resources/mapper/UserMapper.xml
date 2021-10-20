@@ -5,7 +5,9 @@
 <mapper namespace="cn.stackbox.demo.mapper.UserMapper">
     <!-- 自定义模糊查找 SQL -->
     <select id="findByName" resultType="cn.stackbox.demo.entity.User">
-        select * from user where name like concat('%',#{name},'%')
+        select id, username, gender, email
+        from tb_user
+        where username like concat('%',#{name},'%')
     </select>
 
 </mapper>
