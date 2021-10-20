@@ -1,18 +1,20 @@
 package cn.stackbox.demo.entity;
 
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
 @Table(name = "tb_user")
-public class User {
+public class User implements Serializable {
+
+    private static final Long serialVersionUID = 1L;
+
     @Id
     @Column(name = "id", nullable = false)
-    @GenericGenerator(name = "idGenerator", strategy = "UUID")
-    @GeneratedValue(generator = "idGenerator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "username", nullable = false)
