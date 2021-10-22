@@ -46,6 +46,7 @@ public class CacheApplicationTests {
 				return 1;
 			}}.call();
 
+		/**
 		Integer callable2 = new Callable<Integer>() {
 			@Override
 			public Integer call() throws Exception {
@@ -60,7 +61,7 @@ public class CacheApplicationTests {
 
 				return 1;
 			}}.call();
-
+**/
 	}
 
 }
